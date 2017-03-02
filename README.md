@@ -1,2 +1,2 @@
-# EulerProjext
+# EulerProject
 Files to solve the EulerProject
