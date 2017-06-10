@@ -28,6 +28,7 @@ for i,v in enumerate(factor_1):
         test_answer = str(f1*f2)
 
         if (test_ans_num % 2 == 0):
+            pass
             left = test_answer[0:3]
             right = test_answer[3:]
             right_mir = right[::-1]
@@ -39,6 +40,11 @@ for i,v in enumerate(factor_1):
         elif(test_ans_num % 2 != 0):
             left = test_answer[0:2]
             right = test_answer[3:]
+            right_mir = right[::-1]
+
+            if left == right_mir:
+                print(test_ans_num)
+                exit("Answer found.")
 
         else:
             pass
