@@ -21,10 +21,12 @@ list_init = range(100,1000)
 factor_1 = list_init[::-1]
 factor_2 = list_init[::-1]
 
-print factor_2[1]
+for i,v in enumerate(factor_1):
+    f1 = v
 
-for a,b in enumerate(factor_1):
-    #print(b,a)
-    pass
+    for j,w in enumerate(factor_2):
+        f2 = w
+        test_answer = f1*f2
+        print(test_answer)
 
 exit("Ending script.")
