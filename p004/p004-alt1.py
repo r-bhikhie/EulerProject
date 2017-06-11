@@ -12,4 +12,25 @@
 # min_product = 10000
 #
 # This is to approach from the other way: Create a list of all possible solutions and evaluate it backwards.
-#
+
+populate = range(999, 99, -1)
+solutions = []
+
+# Create list with all possible 6-digit solutions
+for el in populate:
+    left = str(el)
+    right = left[::-1]
+    test = int(left+right)
+    solutions.append(test)
+
+# Start actual evaluation
+
+for ans in solutions:
+    for fac in populate:
+        if ans == 999999:
+            continue
+        if ans % fac == 0:
+            print ans
+            exit("Solution found!")
+
+exit("Nothing found :( Something went wrong!")
