@@ -24,12 +24,12 @@ for el in populate:
     solutions.append(test)
 
 # Start actual evaluation
-
 for ans in solutions:
     for fac in populate:
         if ans == 999999:
             continue
-        if ans % fac == 0:
+        if ((ans % fac == 0) and (len(str(ans/fac))) <=3 ):
+            print fac
             print ans
             exit("Solution found!")
 
